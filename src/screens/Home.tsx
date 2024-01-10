@@ -1,7 +1,6 @@
-import {ScrollView, StyleSheet, Text, View} from 'react-native';
+import {Alert, ScrollView, StyleSheet, Text, View} from 'react-native';
 import React from 'react';
 import CustomButton from '../components/CustomButton';
-import {useNavigation} from '@react-navigation/native';
 
 const Home = (props: any) => {
   const {navigation}: any = props;
@@ -16,6 +15,14 @@ const Home = (props: any) => {
         <CustomButton
           title={'Login'}
           onPress={() => navigation?.navigate('Login')}
+        />
+        <CustomButton
+          title={'Alert Box'}
+          onPress={() => Alert.alert('Notification', 'Alert pop-up is open')}
+        />
+        <CustomButton
+          title={'Video Player'}
+          onPress={() => navigation?.navigate('VideoPlayer')}
         />
       </ScrollView>
     </View>

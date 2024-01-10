@@ -1,6 +1,7 @@
 import * as React from 'react';
-import {fireEvent, render} from '@testing-library/react-native';
+import {fireEvent, render, waitFor} from '@testing-library/react-native';
 import Home from '../../src/screens/Home';
+import {act} from 'react-test-renderer';
 
 describe('Home screen renderer', () => {
   it('Checking Heading', () => {

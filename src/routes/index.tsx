@@ -7,11 +7,13 @@ import {
 import Home from '../screens/Home';
 import Counter from '../screens/Counter';
 import Login from '../screens/Login';
+import VideoPlayer from '../screens/VideoPlayer';
 
 export type TRootStack = {
   Home: undefined;
   Counter: undefined;
   Login: undefined;
+  VideoPlayer: undefined;
 };
 
 export type NavigationProps = NativeStackNavigationProp<TRootStack>;
@@ -29,6 +31,11 @@ const index = () => {
         />
         <Stack.Screen name="Counter" component={Counter} />
         <Stack.Screen name="Login" component={Login} />
+        <Stack.Screen
+          name="VideoPlayer"
+          component={VideoPlayer}
+          options={{title: 'Video Player'}}
+        />
       </Stack.Navigator>
     </NavigationContainer>
   );

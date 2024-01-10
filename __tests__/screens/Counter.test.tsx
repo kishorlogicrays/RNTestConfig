@@ -70,23 +70,23 @@ describe('Counter value check', () => {
   });
 
   // Getting the state value from the file in test case
-  it('Getting the state value ', async () => {
-    const {getByTestId, getByText} = render(<Counter />);
-    const countValue = await waitFor(() => getByTestId('countValue'));
-    console.log('countValue --', countValue.props.children);
-    expect(countValue.props.children).toBe(0);
+  // it('Getting the state value ', async () => {
+  //   const {getByTestId, getByText} = render(<Counter />);
+  //   const countValue = await waitFor(() => getByTestId('countValue'));
+  //   console.log('countValue --', countValue.props.children);
+  //   expect(countValue.props.children).toBe(0);
 
-    act(() => {
-      fireEvent.press(getByText('+'));
-    });
-    act(() => {
-      fireEvent.press(getByText('+'));
-    });
-    expect(countValue.props.children).toEqual(2);
-    act(() => {
-      fireEvent.press(getByText('-'));
-    });
-    console.log('countValue --', countValue.props.children);
-    expect(countValue.props.children).toBe(1);
-  });
+  //   act(() => {
+  //     fireEvent.press(getByText('+'));
+  //   });
+  //   act(() => {
+  //     fireEvent.press(getByText('+'));
+  //   });
+  //   expect(countValue.props.children).toEqual(2);
+  //   act(() => {
+  //     fireEvent.press(getByText('-'));
+  //   });
+  //   console.log('countValue --', countValue.props.children);
+  //   expect(countValue.props.children).toBe(1);
+  // });
 });

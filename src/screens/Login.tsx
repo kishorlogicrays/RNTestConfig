@@ -6,6 +6,25 @@ const Login = () => {
   const passwordRef: any = useRef();
   const [email, setEmail] = useState<string>('');
   const [password, setPassword] = useState<string>('');
+  const [error, setError] = useState<string>('');
+
+  const onSubmitHandler = async () => {
+    if (!/^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/.test(email)) {
+      setError('Invalid email address');
+      return;
+    } else if (
+      /^(?=.*[A-Z])(?=.*[a-z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/.test(
+        password,
+      )
+    ) {
+      setError('Invalid password');
+      return;
+    } else {
+      // If everything is valid, proceed with login
+      setError('');
+      Alert.alert('Success!', 'Login Successfully');
+    }
+  };
 
   return (
     <View style={styles.container}>
@@ -27,10 +46,7 @@ const Login = () => {
         secureTextEntry
         onChangeText={passwordValue => setPassword(passwordValue)}
       />
-      <CustomButton
-        title={'Login'}
-        onPress={() => Alert.alert('Success!', 'Login Successfully')}
-      />
+      <CustomButton title={'Login'} onPress={() => onSubmitHandler()} />
     </View>
   );
 };

@@ -161,6 +161,65 @@ exports[`App component renderer renders correctly 1`] = `
                     Counter
                   </Text>
                 </View>
+                <View
+                  accessibilityState={
+                    {
+                      "busy": undefined,
+                      "checked": undefined,
+                      "disabled": undefined,
+                      "expanded": undefined,
+                      "selected": undefined,
+                    }
+                  }
+                  accessibilityValue={
+                    {
+                      "max": undefined,
+                      "min": undefined,
+                      "now": undefined,
+                      "text": undefined,
+                    }
+                  }
+                  accessible={true}
+                  collapsable={false}
+                  focusable={true}
+                  onClick={[Function]}
+                  onResponderGrant={[Function]}
+                  onResponderMove={[Function]}
+                  onResponderRelease={[Function]}
+                  onResponderTerminate={[Function]}
+                  onResponderTerminationRequest={[Function]}
+                  onStartShouldSetResponder={[Function]}
+                  style={
+                    {
+                      "alignItems": "center",
+                      "backgroundColor": "#add268",
+                      "borderRadius": 10,
+                      "elevation": 5,
+                      "justifyContent": "center",
+                      "margin": 10,
+                      "opacity": 1,
+                      "padding": 5,
+                      "shadowColor": "#000",
+                      "shadowOffset": {
+                        "height": 2,
+                        "width": 0,
+                      },
+                      "shadowOpacity": 0.25,
+                      "shadowRadius": 3.84,
+                    }
+                  }
+                >
+                  <Text
+                    style={
+                      {
+                        "fontSize": 16,
+                        "fontWeight": "500",
+                      }
+                    }
+                  >
+                    Login
+                  </Text>
+                </View>
               </View>
             </RCTScrollView>
           </View>
