@@ -11,6 +11,7 @@ afterEach(cleanup);
 
 describe('App component renderer', () => {
   it('renders correctly', () => {
-    render(<App />);
+    const tree = render(<App />).toJSON();
+    expect(tree).toMatchSnapshot();
   });
 });
