@@ -46,7 +46,7 @@ const Login = () => {
         secureTextEntry
         onChangeText={passwordValue => setPassword(passwordValue)}
       />
-      <CustomButton title={'Login'} onPress={() => onSubmitHandler()} />
+      <CustomButton title={'Submit'} onPress={() => onSubmitHandler()} />
     </View>
   );
 };

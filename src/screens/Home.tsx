@@ -24,6 +24,14 @@ const Home = (props: any) => {
           title={'Video Player'}
           onPress={() => navigation?.navigate('VideoPlayer')}
         />
+        <CustomButton
+          title={'FlatList'}
+          onPress={() => navigation?.navigate('FlatList')}
+        />
+        <CustomButton
+          title={'FetchList'}
+          onPress={() => navigation?.navigate('FetchList')}
+        />
       </ScrollView>
     </View>
   );

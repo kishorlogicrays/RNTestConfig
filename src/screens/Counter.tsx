@@ -9,7 +9,7 @@ const Counter = () => {
       <TouchableOpacity
         style={styles.countButton}
         onPress={() => setCount(count + 1)}>
-        <Text style={styles.button}>+</Text>
+        <Text style={styles.button}>Increment</Text>
       </TouchableOpacity>
       <Text style={styles.countStyles} testID="countValue">
         {count}
@@ -18,7 +18,7 @@ const Counter = () => {
         style={styles.countButton}
         disabled={count == 0}
         onPress={() => count != 0 && setCount(count - 1)}>
-        <Text style={styles.button}>-</Text>
+        <Text style={styles.button}>Decrement</Text>
       </TouchableOpacity>
     </View>
   );
@@ -34,11 +34,11 @@ const styles = StyleSheet.create({
   },
   countButton: {
     height: 60,
-    width: 60,
     justifyContent: 'center',
     alignItems: 'center',
     backgroundColor: '#add268',
     borderRadius: 10,
+    paddingHorizontal: 20,
   },
   countStyles: {
     alignSelf: 'center',
@@ -47,7 +47,7 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
   },
   button: {
-    fontSize: 30,
+    fontSize: 15,
   },
 });
 

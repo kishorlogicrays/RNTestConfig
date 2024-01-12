@@ -1,0 +1,43 @@
+appId: com.rntestconfig
+---
+- launchApp
+- tapOn: Counter
+- tapOn: Increment
+- tapOn: Increment
+- tapOn: Decrement
+- tapOn: Increment
+- tapOn: Decrement
+- pressKey: back
+- tapOn: Login
+- inputText: vekariyanayan2000@gmail.com
+- tapOn: Enter your password
+- inputText: Test@1234567890
+- tapOn: Submit
+- pressKey: back
+- pressKey: back
+- tapOn: Alert Box
+- tapOn: OK
+- tapOn: Video Player
+- tapOn: Pause
+- tapOn: Continue
+- tapOn: Pause
+- tapOn: Full Screen
+- tapOn: Continue
+- tapOn: Exit Full screen
+- tapOn: Pause
+- pressKey: back
+- tapOn: FlatList
+- assertVisible: Pizza
+- scrollUntilVisible:
+    element: Risotto
+    direction: 'DOWN'
+- scrollUntilVisible:
+    element: Beer
+    direction: 'DOWN'
+- pressKey: back
+- tapOn: FetchList
+- assertVisible: 1-user-container
+- scrollUntilVisible:
+    element: 15-user-container
+    direction: 'DOWN'
+- pressKey: back

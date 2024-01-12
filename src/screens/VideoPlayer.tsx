@@ -2,12 +2,13 @@ import {StyleSheet, Text, TouchableOpacity, View} from 'react-native';
 import React, {useState} from 'react';
 import Video from 'react-native-video';
 
-const VideoPlayer = () => {
+const VideoPlayer = (props: any) => {
   const [isPause, setIsPause] = useState<boolean>(false);
   const [isFullScreen, setIsFullScreen] = useState<boolean>(false);
   return (
     <View style={styles.container}>
       <Video
+        accessibilityLabel={'video-player'}
         testID="VideoId"
         source={{
           uri: 'http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/VolkswagenGTIReview.mp4',
@@ -16,9 +17,11 @@ const VideoPlayer = () => {
         resizeMode="contain"
         paused={isPause}
         fullscreen={isFullScreen}
+        onError={e => console.log('error', e)}
       />
 
       <TouchableOpacity
+        testID="onTouch"
         style={styles.pauseContainer}
         onPress={() => setIsPause(!isPause)}>
         <Text style={styles.textStyles}>{isPause ? 'Continue' : 'Pause'}</Text>
